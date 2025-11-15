@@ -1,0 +1,175 @@
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('background1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #f8fafc;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 0;
+}
+
+/* Content Containers */
+section,
+#challenge,
+#instructions,
+#quiz {
+  background-color: rgba(15, 23, 42, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings & Text */
+h1, h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+p, label {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: #f8fafc;
+  margin-bottom: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 0 2px #38bdf8;
+}
+
+/* Buttons */
+button {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* Language Toggle Button */
+#languageToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background-color: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+#languageToggle:hover {
+  background-color: #2563eb;
+}
+
+/* Redesigned I Quit Button (Fixed Bottom Left + Neon Purple) */
+#quitBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #a855f7; /* neon purple */
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #a855f7;
+  transition: all 0.3s ease;
+}
+
+#quitBtn:hover {
+  background-color: #9333ea;
+  box-shadow: 0 0 18px #c084fc, 0 0 8px #c084fc inset;
+  transform: scale(1.05);
+}
+
+/* Messages & Score */
+#message,
+#liveMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #facc15;
+}
+
+#scoreDisplay {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #7dd3fc;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  input[type="text"] {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+
+  #quitBtn {
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.85rem;
+    padding: 10px 14px;
+  }
+}
